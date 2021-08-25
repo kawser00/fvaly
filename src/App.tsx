@@ -1,5 +1,5 @@
 function App() {
-  const hello = 'hello';
+  let hello = 'hello';
   console.log(hello);
 
   return (
