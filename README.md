@@ -21,6 +21,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 "react/react-in-jsx-scope": "off",
 "no-use-before-define": "off",
 "@typescript-eslint/no-use-before-define": "error",
+"react/prop-types": "off",
 }
 
 #### Auto fix
@@ -75,7 +76,22 @@ goto .eslintrc.json file and add "prettier" in to the extends-
 run - `npx mrm@2 lint-staged`
 change lint-staged in package.json file-
 
+<!--
 "lint-staged": {
-"_{.tsx,.ts}": "npx eslint '\*\*/_{.ts,.tsx}' --fix",
-"\*.{ts,tsx,css,md}": "npx prettier --write"
-}
+    "*{.tsx,.ts}": "npx eslint '**/*{.ts,.tsx}' --fix",
+    "*.{ts,tsx,css,md}": "npx prettier --write"
+  } -->
+
+## [After adding any rules(configuration) you need to reopen your code editor(VS Code)]
+
+to reload window in vscode (ctrl+shift+p >type 'reload window' > click on it)
+
+## Useful links
+
+Linter : https://eslint.org/
+Code Formatter : https://prettier.io/
+Prettier vs. Linters: https://prettier.io/docs/en/comparison.html
+Integrating formatter with Linters: https://github.com/prettier/eslint-config-prettier
+Pre-commit Hook & Linting Automation: https://www.npmjs.com/package/lint-staged
+Code Splitting : https://reactjs.org/docs/code-splitting.html
+Error Boundary: https://reactjs.org/docs/error-boundaries.html

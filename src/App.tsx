@@ -1,11 +1,13 @@
-function App() {
-  const hello = 'hello';
-  console.log(hello);
+import AppRouter from './AppRouter';
+import Header from './components/common/Header';
 
+function App() {
   return (
-    <div>
-      <h1>This is heading</h1>
-    </div>
+    <>
+      <AppRouter>
+        <Header />
+      </AppRouter>
+    </>
   );
 }
 
