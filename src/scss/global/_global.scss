@@ -1,0 +1,13 @@
+body {
+  background-color: #F7F8FA;
+}
+
+a {
+  color: $black;
+}
+
+.d-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
