@@ -7,6 +7,11 @@
   }
 
   .middle-header {
+    a {
+      width: 100%;
+      display: block;
+      max-width: 120px;
+    }
     .branding {
       width: 100%;
       max-width: 120px;

@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src"
+    "baseUrl": "./src" // it will help to import any file/images from src folder. we do not need (../../src/assets/images/pic.jpg), we can now use (assets/images/pic.jpg)
   },
   "include": ["src"]
 }
