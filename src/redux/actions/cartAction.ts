@@ -15,9 +15,10 @@ export const removeFromCart = (payload: IProduct) => {
   };
 };
 
-export const clearCart = () => {
+export const clearCart = (payload = '') => {
   return {
     type: ActionType.CLEAR_CART,
+    payload,
   };
 };
 

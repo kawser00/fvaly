@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 import ProductService from 'services/ProductService';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { useCallback } from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from 'redux/actions/cartAction';
 
 interface IParams {
   id: string;
@@ -15,6 +17,8 @@ const ProductDetails = () => {
   const getProduct = useCallback(() => {
     return ProductService.getProductByID(id);
   }, [id]);
+
+  const dispatch = useDispatch();
 
   const { data, isLoading, isSuccess, isError, error } =
     useAsync<IProduct>(getProduct);
@@ -33,7 +37,10 @@ const ProductDetails = () => {
               <Col md={8}>
                 <h3 className="mb-3">{data?.name}</h3>
                 <h1 className="">৳ {data?.price}</h1>
-                <button className="btn btn-primary">
+                <button
+                  onClick={() => dispatch(addToCart(data as IProduct))}
+                  className="btn btn-primary"
+                >
                   <AiOutlineShoppingCart /> Add to Cart
                 </button>
                 <p className="mt-5">{data?.description}</p>
